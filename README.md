@@ -104,12 +104,14 @@ The API returns HTTP 422 when required fields are missing or invalid.
 
 **AI/API Errors**
 
-```json
+```text
 The API returns HTTP 500 when email generation fails.
 ```
 
 
 ## AI Usage
+
+The service currently uses the `gpt-4o-mini` model through the OpenAI API.
 
 The service uses an AI API to generate email content based on the purpose, recipient name, and requested tone.
 
@@ -187,3 +189,8 @@ Use the request body described in the API Usage section.
 
 To test validation, send a request without recipient_name.
 The API should return HTTP 422 with a validation error.
+
+### Expected Validation Response
+
+HTTP Status: `422 Unprocessable Content`
+The response contains validation errors for any missing or invalid required fields.
