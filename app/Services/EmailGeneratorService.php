@@ -6,7 +6,7 @@ use OpenAI\Laravel\Facades\OpenAI;
 
 class EmailGeneratorService
 {
-    public function generateEmail(string $purpose, string $recipientName, string $tone)
+    public function generateEmail(string $purpose, string $recipientName, string $tone): array
     {
         $prompt = "Generate a short, customer-friendly email based on the following details.
 
